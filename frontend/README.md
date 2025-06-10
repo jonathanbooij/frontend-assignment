@@ -3,9 +3,14 @@
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
 
 ## Command used to generate
+
 ng new frontend --standalone --style=scss --routing --skip-git --strict
 
 ## Development server
+
+```bash
+npm start
+```
 
 To start a local development server, run:
 
