@@ -1,0 +1,38 @@
+:host {
+	display: block;
+	padding: 2rem;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+h2 {
+	margin-bottom: 1rem;
+}
+
+p {
+	font-size: 1rem;
+	margin: 0.5rem 0;
+}
+
+.back-button {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	color: #0b5ed7;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+
+	&:hover {
+		background-color: #f0f0f0;
+		border-color: #999;
+	}
+	&:focus {
+		outline: 3px solid #0b5ed7;
+		outline-offset: 2px;
+	}
+	&:active {
+		background-color: #e0e0e0;
+		border-color: #666;
+	}
+}

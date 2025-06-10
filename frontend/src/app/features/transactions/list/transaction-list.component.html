@@ -1,0 +1,9 @@
+<h1>Transactions</h1>
+<ul class="transaction-list">
+	@for (transaction of transactions$ | async; track transaction.id) {
+		<li (click)="openDetail(transaction.id)" class="transaction-item">
+			<span class="name">{{ transaction.otherParty?.name }}</span>
+			<span class="amount">{{ transaction.amount.toFixed(2) }}</span>
+		</li>
+	}
+</ul>
