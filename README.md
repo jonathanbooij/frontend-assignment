@@ -28,3 +28,6 @@ In addition to the code, consider other matters that you consider as part of you
 - Used semantic commit messages, further validation could have been added using e.g. husky
 - Constructing repeated UI components inside shared/components, I found it not necessary for the small scope of this app
 - If more complex logic, the sorting or mapping logic of the repository could have been moved to another mapper/format service, but since it was not much logic and for simplicity left it like this
+
+## Later update!
+- Misread the assignment, should be grouped by date, it is now.

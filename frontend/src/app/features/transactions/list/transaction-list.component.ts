@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Transaction } from '../../../domain/transaction/transaction.model';
+import { TransactionDay } from '../../../domain/transaction/transaction.model';
 import { TransactionRepository } from '../../../domain/transaction/transaction.repository';
 import { Router } from '@angular/router';
 
@@ -13,15 +13,15 @@ import { Router } from '@angular/router';
 	styleUrls: ['./transaction-list.component.scss'],
 })
 export class TransactionListComponent implements OnInit {
-	transactions$!: Observable<Transaction[]>;
+	transactionDays$!: Observable<TransactionDay[]>;
 	private readonly repository = inject(TransactionRepository);
 	private readonly router = inject(Router);
 
 	public ngOnInit(): void {
-		this.transactions$ = this.repository.getAll();
+		this.transactionDays$ = this.repository.getAll();
 	}
 
-	public openDetail(id: string) {
-		this.router.navigate(['/transactions', id]);
+	public openDetail(dayId: string, transactionId: number) {
+		this.router.navigate(['/transactions', dayId, transactionId]);
 	}
 }

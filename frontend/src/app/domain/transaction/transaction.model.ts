@@ -1,7 +1,7 @@
 export interface Transaction {
 	// as flattened ids are not unique anymore, the timestamp is used as the new unique id,
 	// which then becomes a string instead of a number
-	id: string;
+	id: number;
 	timestamp: string;
 	amount: number;
 	currencyCode: 'EUR' | 'USD';

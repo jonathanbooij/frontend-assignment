@@ -7,7 +7,7 @@
 	<p><strong>Other Party IBAN:</strong> {{ transaction.otherParty?.iban }}</p>
 	<p><strong>Amount:</strong> €{{ transaction.amount }}</p>
 	<p><strong>Description:</strong> {{ transaction.description }}</p>
-	<p><strong>Date:</strong> {{ transaction.timestamp | date: 'medium' }}</p>
+	<p><strong>Date:</strong> {{ transaction.timestamp | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
 } @else {
 	<p><strong>Loading...</strong></p>
 }

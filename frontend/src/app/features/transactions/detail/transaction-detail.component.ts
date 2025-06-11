@@ -21,8 +21,10 @@ export class TransactionDetailComponent implements OnInit {
 	public ngOnInit(): void {
 		this.transaction$ = this.route.paramMap.pipe(
 			switchMap((params) => {
-				const id = params.get('id') ?? 'no id param found';
-				return this.repository.getById(id);
+				const dayId = params.get('dayId') ?? 'no dayId param found';
+				const transactionId = params.get('transactionId') ?? 'no transactionId param found';
+
+				return this.repository.getById(dayId, parseInt(transactionId));
 			}),
 		);
 	}
