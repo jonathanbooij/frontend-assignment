@@ -17,10 +17,37 @@
 
 	.name {
 		font-weight: 500;
+		margin-right: 0.5rem;
 	}
 
 	.amount {
 		font-weight: 600;
 		color: #2a7f62;
+	}
+}
+
+.transaction-button {
+	all: unset; // remove default button styling
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 1rem;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 6px;
+
+	&:hover {
+		background-color: #f0f0f0;
+		border-color: #999;
+	}
+
+	&:focus {
+		outline: 3px solid #0b5ed7;
+		outline-offset: 2px;
+	}
+
+	&:active {
+		background-color: #e0e0e0;
+		border-color: #666;
 	}
 }
